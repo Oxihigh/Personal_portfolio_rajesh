@@ -13,5 +13,5 @@ While my primary focus is infrastructure, I maintain a deep technical interest i
 
 ### 🎙️ Leadership & Personal Growth
 * **Toastmasters International:** I am an active leader within Toastmasters, having served as **Vice President** and **Secretary**. I regularly participate in international speech contests to refine my professional communication and storytelling skills.
-* **Mentorship:** I value community growth and actively engage in mentorship, serving as a mentee under **Sakshi** and a mentor to **Aarti**.
+* **Mentorship:** I value community growth and actively engage in mentorship.
 * **Philosophy & Poetry:** Outside of technical work, I find balance through reading poetry and philosophical literature, such as *The Alchemist* and *Man’s Search for Meaning*.
