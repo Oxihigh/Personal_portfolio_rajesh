@@ -2,42 +2,6 @@
 
 A modern, animated portfolio website built with Next.js, Framer Motion, and Tailwind CSS. Features smooth parallax scrolling, cinematic animations, and a dedicated leadership page.
 
-## 📁 Project Structure
-
-\`\`\`
-├── app/
-│   ├── page.tsx                 # Home page
-│   ├── layout.tsx               # Root layout with Lenis scroll setup
-│   ├── globals.css              # Global styles and animations
-│   └── leadership/
-│       └── page.tsx             # Dedicated leadership page
-├── components/
-│   ├── header.tsx               # Navigation header
-│   ├── hero.tsx                 # Hero section with parallax
-│   ├── featured.tsx             # About/Featured section
-│   ├── projects.tsx             # Projects showcase
-│   ├── contact.tsx              # Contact section
-│   ├── leadership.tsx           # Leadership cards (home page)
-│   ├── achievements.tsx         # Awards & recognitions
-│   ├── leadership-hero.tsx      # Leadership page hero
-│   ├── toastmasters-journey.tsx # Toastmasters section with description
-│   ├── rotaract-leadership.tsx  # Rotaract section with description
-│   ├── reflections.tsx          # Leadership reflections
-│   ├── leadership-cta.tsx       # Call-to-action on leadership page
-│   └── footer.tsx               # Footer with quote
-├── hooks/
-│   └── use-scroll-to-top.ts     # Auto scroll-to-top on navigation
-├── public/
-│   ├── images/
-│   │   ├── mountain-landscape.jpg
-│   │   ├── spiral-circles.jpg
-│   │   └── woman-horse.jpg
-│   ├── toastmasters-speaking-stage.jpg
-│   └── rotaract-community-service.jpg
-└── package.json
-\`\`\`
-
-## 🎨 Key Content Locations
 
 ### Home Page (`app/page.tsx`)
 
@@ -201,25 +165,3 @@ npm run build
 # Start production server
 npm start
 \`\`\`
-
-Visit `http://localhost:3000` to view the site.
-
-## 📋 Quick Edit Checklist
-
-- [ ] Update hero headline and tagline
-- [ ] Change about section text
-- [ ] Update contact information
-- [ ] Add/replace project cards
-- [ ] Update achievement list
-- [ ] Replace images in public folder
-- [ ] Update social media links
-- [ ] Modify leadership page descriptions
-- [ ] Update footer quote
-
-## 💡 Tips
-
-- Keep paragraph lengths consistent for visual balance
-- Test images at different screen sizes
-- Maintain the dark theme aesthetic
-- Keep animations smooth and responsive
-- Test on mobile devices before deploying
