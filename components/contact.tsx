@@ -6,8 +6,8 @@ export default function Contact() {
   const contactLinks = [
     {
       label: "Email",
-      value: "oxihigh@gmail.com",
-      href: "mailto:oxihigh@gmail.com",
+      value: "rkumark.dev@gmail.com",
+      href: "mailto:rkumark.dev@gmail.com",
       icon: "✉️",
     },
     {
