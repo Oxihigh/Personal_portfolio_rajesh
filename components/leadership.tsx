@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
+import { BlurText } from "@/components/ui/blur-text"
 
 export default function Leadership() {
   const leadershipItems = [
@@ -26,28 +27,26 @@ export default function Leadership() {
     <section id="leadership" className="min-h-screen bg-neutral-900 py-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Leadership & Impact
-          </h2>
-          <p className="text-neutral-400 mb-16 text-lg max-w-3xl">
+        <div>
+          <BlurText text="Community Leadership" className="text-4xl md:text-5xl font-bold text-white mb-4" />
+          <motion.p 
+            initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+            whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-neutral-400 mb-16 text-lg max-w-3xl"
+          >
             Building communities, inspiring others, and creating meaningful change through leadership.
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         {/* Leadership Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {leadershipItems.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+              whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
               className="group bg-neutral-900 border border-neutral-800 p-8 rounded-lg 
                          hover:border-neutral-600 transition-all duration-300 
                          hover:shadow-lg hover:shadow-neutral-800/50"
@@ -77,8 +76,8 @@ export default function Leadership() {
         {/* Button */}
         <div className="flex justify-center items-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ filter: "blur(10px)", opacity: 0, scale: 0.9 }}
+            whileInView={{ filter: "blur(0px)", opacity: 1, scale: 1 }} viewport={{ once: true }}
             transition={{ duration: 0.1, delay: 0.1 }}
           >
             <Link href="/leadership" passHref>

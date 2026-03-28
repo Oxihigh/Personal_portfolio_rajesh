@@ -1,9 +1,9 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
+import { BlurText } from "@/components/ui/blur-text"
 
 export default function RotaractLeadership() {
   const container = useRef()
@@ -28,14 +28,7 @@ export default function RotaractLeadership() {
   return (
     <section ref={container} className="min-h-screen bg-neutral-900 py-20 px-6 flex items-center">
       <div className="max-w-6xl mx-auto w-full">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-white mb-16"
-        >
-          Rotaract Leadership
-        </motion.h2>
+        <BlurText text="Rotaract Leadership" className="text-4xl md:text-5xl font-bold text-white mb-16" />
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -51,8 +44,8 @@ export default function RotaractLeadership() {
                 {achievements.map((achievement, index) => (
                   <motion.li
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ filter: "blur(10px)", opacity: 0, x: -20 }}
+                    whileInView={{ filter: "blur(0px)", opacity: 1, x: 0 }} viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start gap-3 text-neutral-300"
                   >
@@ -81,8 +74,8 @@ export default function RotaractLeadership() {
         </div>
 
         <motion.blockquote
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ filter: "blur(10px)", opacity: 0 }}
+              whileInView={{ filter: "blur(0px)", opacity: 1 }} viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="border-l-4 border-amber-500 pl-6 py-4 italic text-xl text-neutral-200"
             >

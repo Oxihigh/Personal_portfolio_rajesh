@@ -17,8 +17,8 @@ export default function Reflections() {
     <section ref={container} className="min-h-screen bg-neutral-950 py-20 px-6 flex items-center justify-center">
       <motion.div style={{ scale, opacity }} className="max-w-3xl text-center">
         <motion.blockquote
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ filter: "blur(10px)", opacity: 0 }}
+          whileInView={{ filter: "blur(0px)", opacity: 1 }} viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-3xl md:text-5xl font-bold text-white leading-tight"
         >

@@ -1,80 +1,97 @@
 "use client"
 
-import Image from "next/image"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion"
 
 export default function Featured() {
-  const container = useRef()
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end start"],
-  })
+  const headingText = "I bridge systems and people. Through code, leadership, and conviction."
+  const words = headingText.split(" ")
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["80px", "-80px"])
-  const textY = useTransform(scrollYProgress, [0, 1], ["-40px", "40px"])
+  const descText = "Building agentic AI systems. Leading mission-driven communities. Commanding the stage. I design systems that scale, lead people toward purpose, and speak in ways that land. I obsess over clarity in everything I do. Everything else is noise."
+  const descWords = descText.split(" ")
 
   return (
-    <section
-      ref={container}
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 py-20 bg-neutral-900"
-    >
-      {/* Image Section */}
-      
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-neutral-900 border-t border-b border-neutral-800">
+      <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center h-full">
+        {/* Subtitle */}
+        <motion.h3
+          initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+          whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="uppercase tracking-widest text-amber-500 font-semibold mb-8 text-sm"
+        >
+          About Me
+        </motion.h3>
 
-      <motion.div
-        style={{ y: imageY }}
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        className="flex-1 h-[300px] lg:h-[600px] mb-8 lg:mb-0 lg:order-2 relative w-[80%] lg:w-[60%] mx-auto"
-      >
-      <div className="hidden md:block">
-        <Image
-          src="/images/pes-up.jpg"
-          alt="Professional portrait"
-          fill
-          className="object-cover rounded-xl shadow-2xl"
-        /></div>
-      </motion.div>
-      
-
-
-      {/* Text Section */}
-      <motion.div
-        style={{ y: textY }}
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex-1 text-left flex flex-col justify-center lg:mr-12 lg:order-1 text-white"
-      >
-        <h3 className="uppercase mb-4">About Me</h3>
-        <p className="text-2xl lg:text-4xl mb-8 text-neutral-300 leading-relaxed">
-          An engineer passionate about building intelligent systems that are explainable, transparent, and human-centered.
-          
-          Rooted in the discipline of Linux and Red Hat, I believe technology should not just perform but be understood.
-      
-          As a Toastmasters mentor and Rotaract leader, I strive to bring the same clarity and purpose from code to communication.
-        </p>
-
-        <div className="text-sm space-y-2 mb-8 text-neutral-400">
-          <p><strong className="text-white">Location:</strong> Bengaluru, Karnataka, India</p>
-          <p><strong className="text-white">Email:</strong> oxihigh@gmail.com</p>
-          <p><strong className="text-white">Phone:</strong> +91 7975590933</p>
+        {/* Animated Heading */}
+        <div className="flex flex-wrap justify-center mb-12">
+          {words.map((word, i) => (
+            <motion.span
+              key={`headline-${i}-${word}`}
+              initial={{ filter: "blur(10px)", opacity: 0, y: 10 }}
+              whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
+              transition={{
+                duration: 0.4,
+                delay: i * 0.05 + 0.2, // Stagger effect
+                ease: "easeOut"
+              }}
+              className="text-4xl lg:text-5xl lg:text-6xl font-extrabold text-white mr-3 mb-2 leading-tight"
+            >
+              {['systems', 'people.', 'code,', 'leadership,', 'conviction.'].includes(word) ? (
+                <span className="text-neutral-400">{word}</span>
+              ) : (
+                word
+              )}
+            </motion.span>
+          ))}
         </div>
 
+        {/* Paragraph Description */}
+        <div className="text-lg lg:text-xl text-neutral-300 mb-12 leading-relaxed max-w-2xl mx-auto flex flex-wrap justify-center">
+          {descWords.map((word, i) => (
+            <motion.span
+              key={`desc-${i}-${word}`}
+              initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+              whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
+              transition={{
+                duration: 0.4,
+                delay: i * 0.02 + 0.5, // Faster stagger so it doesn't take too long
+                ease: "easeOut"
+              }}
+              className="mr-[0.25em]"
+            >
+              {word}
+            </motion.span>
+          ))}
+        </div>
+
+        {/* Contact Info Row */}
+        {/* <motion.div
+          initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+          whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex flex-col md:flex-row gap-6 md:gap-12 mb-12 text-sm text-neutral-400 justify-center"
+        >
+          <div><strong className="text-white mr-2">Location:</strong>Bengaluru, India</div>
+          <div><strong className="text-white mr-2">Email:</strong>rkumark.dev@gmail.com</div>
+        </motion.div> */}
+
+        {/* Resume Button */}
         <motion.a
           href="/Rajesh_resume_2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          initial={{ filter: "blur(10px)", opacity: 0, scale: 0.9 }}
+          whileInView={{ filter: "blur(0px)", opacity: 1, scale: 1 }} viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 1 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          className="inline-block"
         >
-          <button className="bg-black text-white border border-white px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit rounded-md">
+          <button className="bg-white text-black font-semibold border border-white px-8 py-3 text-sm transition-all duration-300 hover:bg-neutral-200 cursor-pointer rounded-md">
             VIEW RESUME
           </button>
         </motion.a>
-      </motion.div>
+      </div>
     </section>
   )
 }

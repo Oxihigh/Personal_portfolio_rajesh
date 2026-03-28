@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { BlurText } from "@/components/ui/blur-text"
 
 export default function Footer() {
   return (
@@ -58,9 +59,11 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
-              <h1 className="text-[12vw] sm:text-[10vw] lg:text-[9vw] leading-[0.9] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight max-w-full">
-                Learn who you are, Unlearn what they told you to be.
-              </h1>
+              <BlurText 
+                text="Learn who you are, Unlearn what they told you to be." 
+                className="text-[10vw] lg:text-[9vw] leading-[0.9] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight" 
+                delay={0.2}
+              />
               <p className="text-white text-sm sm:text-base">© 2025 Rajesh Kumar K</p>
             </div>
           </div>

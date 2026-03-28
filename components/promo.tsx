@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { useScroll, useTransform, motion } from "framer-motion"
 import { useRef } from "react"
+import { BlurText } from "@/components/ui/blur-text"
 
 export default function Section() {
   const container = useRef(null)
@@ -58,26 +59,18 @@ export default function Section() {
         </motion.div>
       </div>
 
-      <motion.h3
-  initial={{ opacity: 0, y: -30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  className="relative z-20 mt-16 mb-8 
-             text-center text-2xl sm:text-3xl lg:text-4xl 
-             font-extrabold text-white tracking-wide"
->
-  Technical Expertise
-</motion.h3>
+      <div className="relative z-20 mt-16 mb-8 text-center text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-wide w-full flex justify-center">
+        <BlurText text="Technical Expertise" className="justify-center" />
+      </div>
 
       {/* Skill Boxes */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-full max-w-6xl">
         {skillCategories.map((category, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+            whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
             className="bg-black/40 border border-white/20 rounded-2xl p-5 backdrop-blur-md hover:bg-white/10 transition-all"
           >
             <h4 className="text-white text-lg font-semibold mb-3">{category.title}</h4>
