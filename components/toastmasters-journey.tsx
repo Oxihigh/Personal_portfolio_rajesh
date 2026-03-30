@@ -51,6 +51,10 @@ export default function ToastmastersJourney() {
               <ul className="space-y-4 text-neutral-300">
                 <li className="flex items-start gap-3">
                   <span className="text-amber-500 mt-1">•</span>
+                  <span>Area-level Humorous Speech Contest Winner</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-500 mt-1">•</span>
                   <span>Club-level International Speech Contest Winner</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -82,7 +86,7 @@ export default function ToastmastersJourney() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-neutral-300 leading-relaxed text-base pt-4"
             >
-              
+
             </motion.p>
           </motion.div>
         </div>

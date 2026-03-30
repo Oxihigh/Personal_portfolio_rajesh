@@ -6,7 +6,7 @@ export default function Featured() {
   const headingText = "I bridge systems and people. Through code, leadership, and conviction."
   const words = headingText.split(" ")
 
-  const descText = "Building agentic AI systems. Leading mission-driven communities. Commanding the stage. I design systems that scale, lead people toward purpose, and speak in ways that land. I obsess over clarity in everything I do. Everything else is noise."
+  const descText = "Building agentic AI systems. Leading mission-driven communities. Commanding the stage. I build systems, break them down, and fix them better. I chase hard problems, tell stories that land, and mobilize communities. Whether architecting infrastructure, commanding a stage, or volunteering my time, I'm driven by the same thing: turning complexity into something that actually works."
   const descWords = descText.split(" ")
 
   return (
