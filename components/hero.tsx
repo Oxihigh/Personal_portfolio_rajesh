@@ -27,24 +27,8 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-6 max-w-6xl mx-auto">
-        {/* Profile Image */}
-        <motion.div
-          initial={{ filter: "blur(10px)", opacity: 0, scale: 0.9 }}
-          animate={{ filter: "blur(0px)", opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl w- h-80 md:w-70 md:h-[25rem]"
-        >
-          <Image
-            src="/images/hero.png"
-            alt="Rajesh Kumar K"
-            width={384}
-            height={48}
-            className="object-cover w-full h-full"
-          />
-        </motion.div>
-
         {/* Text Section */}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left order-2 md:order-1">
           <BlurText
             text="Rajesh Kumar"
             className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4 justify-center md:justify-start"
@@ -71,6 +55,22 @@ export default function Hero() {
             "Smarter code. Stronger communities. Bolder voices."
           </motion.blockquote>
         </div>
+
+        {/* Profile Image */}
+        <motion.div
+          initial={{ filter: "blur(10px)", opacity: 0, scale: 0.9 }}
+          animate={{ filter: "blur(0px)", opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl w- h-80 md:w-70 md:h-[25rem] order-1 md:order-2"
+        >
+          <Image
+            src="/images/hero.png"
+            alt="Rajesh Kumar K"
+            width={384}
+            height={48}
+            className="object-cover w-full h-full"
+          />
+        </motion.div>
       </div>
     </section>
   )
