@@ -35,7 +35,7 @@ export default function ToastmastersJourney() {
               src="/images/contest2.jpg"
               alt="Toastmasters speaking"
               fill
-              className="object-cover rounded-lg"
+              className="object-cover rounded-lg object-top"
             />
           </motion.div>
 
@@ -51,6 +51,10 @@ export default function ToastmastersJourney() {
               <ul className="space-y-4 text-neutral-300">
                 <li className="flex items-start gap-3">
                   <span className="text-amber-500 mt-1">•</span>
+                  <span>Division-level Humorous Speech Contest Winner</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-500 mt-1">•</span>
                   <span>Area-level Humorous Speech Contest Winner</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -59,7 +63,7 @@ export default function ToastmastersJourney() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-amber-500 mt-1">•</span>
-                  <span>Area-level International Speech Contest Finalist</span>
+                  <span>Area-level International Speech Contest Winner</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-amber-500 mt-1">•</span>

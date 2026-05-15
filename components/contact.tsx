@@ -207,7 +207,7 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-20 pt-8 border-t border-white/10 text-center"
         >
-          <p className="text-neutral-500 text-sm font-medium">© 2025 Rajesh Kumar K. All rights reserved.</p>
+
         </motion.div>
       </div>
     </section>

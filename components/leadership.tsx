@@ -29,7 +29,7 @@ export default function Leadership() {
         {/* Section Header */}
         <div>
           <BlurText text="Community Leadership" className="text-4xl md:text-5xl font-bold text-white mb-4" />
-          <motion.p 
+          <motion.p
             initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
             whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -90,7 +90,7 @@ export default function Leadership() {
                            hover:shadow-[0_0_25px_rgba(255,255,255,0.3)] 
                            transition-all duration-300"
               >
-                Checkout my leadership journey
+                Click here to checkout my journey
                 <ArrowUpRight
                   size={20}
                   className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"

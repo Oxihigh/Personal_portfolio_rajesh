@@ -6,6 +6,13 @@ import { BlurText } from "@/components/ui/blur-text"
 export default function Projects() {
   const projects = [
     {
+      title: "Project Red Link",
+      description:
+        "A hyper-local, privacy-centric blood donation ecosystem that eliminates 'Blood Mafia' exploitation. Red Link features AI-powered document verification (Groq AI), a secure 'Trust Handshake' protocol, and automated health governance for donor eligibility.",
+      tags: ["FastAPI", "Supabase", "Groq AI", "React", "RLS", "Healthcare Tech"],
+      link: "https://theredlinkproject.vercel.app/",
+    },
+    {
       title: "Explainable AI Decision Support System for Mitotic Detection using B-cos Networks",
       description:
         "YOLO and Resnet based deep learning model that can detect mitotic figures in histopathology WSI leveraging Bcos networks which makes the model transparent and explainable.",
@@ -44,9 +51,10 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
-              whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
+              whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group bg-neutral-900 border border-neutral-800 p-8 rounded-lg hover:border-neutral-600 transition-all duration-300 hover:shadow-lg"
+              className="group relative bg-neutral-900 border border-neutral-800 hover:border-neutral-600 p-8 rounded-lg transition-all duration-300 hover:shadow-lg"
             >
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-neutral-300 transition-colors">
                 {project.title}
@@ -54,12 +62,17 @@ export default function Projects() {
               <p className="text-neutral-400 mb-6 leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full">
+                  <span
+                    key={tagIndex}
+                    className="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full"
+                  >
                     {tag}
                   </span>
                 ))}
               </div>
-              <div className="mt-6 text-neutral-400 group-hover:text-white transition-colors">View on GitHub →</div>
+              <div className="mt-6 text-neutral-400 group-hover:text-white transition-colors font-medium">
+                {project.link.includes("github.com") ? "View on GitHub →" : "View Live Project →"}
+              </div>
             </motion.a>
           ))}
         </div>

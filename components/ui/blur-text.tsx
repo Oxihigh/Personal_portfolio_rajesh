@@ -29,7 +29,7 @@ export function BlurText({
           whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{
             duration: 0.4,
-            delay: i * 0.12 + delay,
+            delay: i * 0.04 + delay,
             ease: "easeOut"
           }}
           className="mr-[0.25em]"

@@ -31,7 +31,7 @@ export default function Featured() {
               whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{
                 duration: 0.4,
-                delay: i * 0.05 + 0.2, // Stagger effect
+                delay: i * 0.03 + 0.1, // Faster stagger
                 ease: "easeOut"
               }}
               className="text-4xl lg:text-5xl lg:text-6xl font-extrabold text-white mr-3 mb-2 leading-tight"
@@ -54,7 +54,7 @@ export default function Featured() {
               whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{
                 duration: 0.4,
-                delay: i * 0.02 + 0.5, // Faster stagger so it doesn't take too long
+                delay: i * 0.01 + 0.2, // Faster stagger
                 ease: "easeOut"
               }}
               className="mr-[0.25em]"
